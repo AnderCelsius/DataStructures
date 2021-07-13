@@ -2,7 +2,7 @@
 
 namespace DataStructure.Base
 {
-    public class Node<T> where T : IComparable
+    public class Node<T> 
     {
         public T Data;
         public Node<T> Next;

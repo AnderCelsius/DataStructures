@@ -8,7 +8,7 @@ namespace DataStructure.Base
     /// Creates the linkage for the nodes of the linked list
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class LinkedList<T> where T : IComparable
+    public class LinkedList<T> 
     {
         public Node<T> Head;
         public Node<T> Tail;
@@ -88,7 +88,7 @@ namespace DataStructure.Base
         {
             Node<T> current = new Node<T>(item);
 
-            while (current.Data.CompareTo(item) != 0)
+            while (current.Equals(item))
             {
                 current = current.Next;
             }

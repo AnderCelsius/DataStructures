@@ -3,7 +3,7 @@ using System;
 
 namespace MyStack
 {
-    public class DSStack<T> where T : IComparable
+    public class MyStack<T> 
     {
         LinkedList<T> myStack = new LinkedList<T>(); // Create a new instance of Linked list to apply the stack concept.
 
@@ -26,6 +26,7 @@ namespace MyStack
 
             if (myStack.IsEmpty())
                 throw new Exception("There is no item in the Stack");
+            
             else if(node == myStack.Tail)
             {
                 T temp = node.Data;
@@ -41,6 +42,7 @@ namespace MyStack
                 }
                 T temp = myStack.Tail.Data;
                 myStack.Tail = node;
+                myStack.Size--;
                 return temp;
             }
         }
@@ -76,6 +78,11 @@ namespace MyStack
         public int Size()
         {
             return myStack.Length();
+        }
+
+        public bool IsEmpty()
+        {
+            return myStack.IsEmpty();
         }
     }
 }
