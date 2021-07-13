@@ -10,8 +10,8 @@ namespace DataStructure.Base
     /// <typeparam name="T"></typeparam>
     public class LinkedList<T> where T : IComparable
     {
-        internal Node<T> Head;
-        internal Node<T> Tail;
+        public Node<T> Head;
+        public Node<T> Tail;
         public int Size;
 
         /// <summary>
@@ -49,9 +49,12 @@ namespace DataStructure.Base
         /// <returns></returns>
         public int Add(T item)
         {
-            var newNode = new Node<T>(item, null);
+            var newNode = new Node<T>(item);
             if (IsEmpty())
+            {
                 Head = newNode;
+                Tail = newNode;
+            }
             else
             {
                 Tail.Next = newNode;
@@ -69,7 +72,7 @@ namespace DataStructure.Base
         /// <returns></returns>
         public bool Remove(T item)
         {
-            Node<T> current = new Node<T>(item, null);
+            Node<T> current = new Node<T>(item);
 
             if(Check(item))
                 current.Next = current.Next.Next;
@@ -83,7 +86,7 @@ namespace DataStructure.Base
         /// <returns></returns>
         public bool Check(T item)
         {
-            Node<T> current = new Node<T>(item, null);
+            Node<T> current = new Node<T>(item);
 
             while (current.Data.CompareTo(item) != 0)
             {
@@ -99,7 +102,7 @@ namespace DataStructure.Base
         /// <returns></returns>
         public int Index(T item)
         {
-            Node<T> current = new Node<T>(item, null);
+            Node<T> current = new Node<T>(item);
             int index = 0;
 
             while(Check(item) != false)
