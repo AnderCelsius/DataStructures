@@ -1,6 +1,7 @@
 ﻿using MyStack;
 using MyQueue;
 using System;
+using DataStructure.Base;
 
 namespace DataStructure
 {
@@ -23,14 +24,19 @@ namespace DataStructure
             //Console.WriteLine(stackNum.IsEmpty());
 
             var queueNum = new MyQueue<int>();
-            queueNum.EnQueue(5);
-            queueNum.EnQueue(10);
-            Console.WriteLine(queueNum.Size());
-            Console.WriteLine(queueNum.DeQueue());
-            Console.WriteLine(queueNum.Size());
-            Console.WriteLine(queueNum.DeQueue());
-            Console.WriteLine(queueNum.Size());
-            Console.WriteLine(queueNum.DeQueue());
+            //queueNum.EnQueue(5);
+            //queueNum.EnQueue(10);
+            //Console.WriteLine(queueNum.Size());
+            //Console.WriteLine(queueNum.DeQueue());
+            //Console.WriteLine(queueNum.Size());
+            //Console.WriteLine(queueNum.DeQueue());
+            //Console.WriteLine(queueNum.Size());
+            //Console.WriteLine(queueNum.DeQueue());
+
+            var linkList = new LinkedList<int>();
+            linkList.Add(5);
+            Console.WriteLine(linkList.Index(7));
+            Console.WriteLine(linkList.Check(7)); 
         }
     }
 }

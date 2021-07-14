@@ -26,8 +26,8 @@ namespace MyStack
 
             if (myStack.IsEmpty())
                 throw new Exception("There is no item in the Stack");
-            
-            else if(node == myStack.Tail)
+
+            else if (node == myStack.Tail)
             {
                 T temp = node.Data;
                 myStack.Head = null;
@@ -36,7 +36,7 @@ namespace MyStack
             }
             else
             {
-                while(node.Next != myStack.Tail)
+                while (node.Next != myStack.Tail)
                 {
                     node = node.Next;
                 }

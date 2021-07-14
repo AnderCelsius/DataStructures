@@ -74,8 +74,15 @@ namespace DataStructure.Base
         {
             Node<T> current = new Node<T>(item);
 
-            if(Check(item))
+            if (IsEmpty())
+                throw new Exception("There are no items in the list");
+
+            if(Check(item) == true)
+            {
                 current.Next = current.Next.Next;
+                Size--;
+            }
+                
             return Check(item);
         }
 
@@ -86,13 +93,16 @@ namespace DataStructure.Base
         /// <returns></returns>
         public bool Check(T item)
         {
-            Node<T> current = new Node<T>(item);
+            Node<T> current = Head;
 
-            while (current.Equals(item))
+            while (current != null)
             {
+                if (current.Data.Equals(item))
+                    return true;
                 current = current.Next;
             }
-            return current.Next.Data != null;
+                
+            return false;
         }
 
         /// <summary>
@@ -102,17 +112,18 @@ namespace DataStructure.Base
         /// <returns></returns>
         public int Index(T item)
         {
-            Node<T> current = new Node<T>(item);
+            Node<T> current = Head;
             int index = 0;
 
-            while(Check(item) != false)
+            while (Check(item) != false)
             {
+                if (current.Data.Equals(item))
+                    return index;
                 current = current.Next;
                 index++;
             }
-            
-            return index;
-
+           
+            return -1;
         }
 
     }
