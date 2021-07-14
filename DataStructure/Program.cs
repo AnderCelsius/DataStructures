@@ -41,10 +41,13 @@ namespace DataStructure
             //Console.WriteLine(linkList.Index(7));
             //Console.WriteLine(linkList.Check(7)); 
 
-            foreach (var item in linkList)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in linkList)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine(linkList.Size);
+            Console.WriteLine(linkList.Remove(59));
+            Console.WriteLine(linkList.Size);
         }
     }
 }

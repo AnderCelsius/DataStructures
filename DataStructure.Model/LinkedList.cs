@@ -73,18 +73,25 @@ namespace SinglyLinkedList
         /// <returns></returns>
         public bool Remove(T item)
         {
-            Node<T> current = new Node<T>(item);
+            Node<T> current = Head;
 
             if (IsEmpty())
                 throw new Exception("There are no items in the list");
 
-            if(Check(item) == true)
+            if (Check(item))
             {
+                if(Size == 1)
+                {
+                    Head = Tail = null;
+                    Size--;
+                    return true;
+                }
                 current.Next = current.Next.Next;
                 Size--;
+                return true;
             }
-                
-            return Check(item);
+            return false;
+            
         }
 
         /// <summary>
