@@ -1,7 +1,7 @@
 ﻿using MyStack;
 using MyQueue;
 using System;
-using DataStructure.Base;
+using SinglyLinkedList;
 
 namespace DataStructure
 {

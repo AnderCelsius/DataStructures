@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructure.Base
+namespace SinglyLinkedList
 {
     /// <summary>
     /// Creates the linkage for the nodes of the linked list

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure", "DataStructure\DataStructure.csproj", "{04C58579-5ECD-4C0E-828B-4C17FC2A2700}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.Base", "DataStructure.Model\DataStructure.Base.csproj", "{13B98098-1696-41DB-8FE2-CDD72B4B9568}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SinglyLinkedList", "DataStructure.Model\SinglyLinkedList.csproj", "{13B98098-1696-41DB-8FE2-CDD72B4B9568}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyQueue", "DataStructure.Core\MyQueue.csproj", "{24D8B339-9488-4975-BA7F-028ED3352BB8}"
 EndProject
