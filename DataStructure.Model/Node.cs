@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructure.Base
+namespace SinglyLinkedList
 {
     public class Node<T> 
     {
