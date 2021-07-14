@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SinglyLinkedList
+namespace SinglyLinkedList 
 {
     /// <summary>
     /// Creates the linkage for the nodes of the linked list
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class LinkedList<T> 
+    public class LinkedList<T> : IEnumerable<T>
     {
         public Node<T> Head;
         public Node<T> Tail;
@@ -125,6 +126,26 @@ namespace SinglyLinkedList
            
             return -1;
         }
+
+        // this will automagically create the 
+        // appropriate class for you
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node<T> current = Head;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            // this will invoke the public generic
+            // version, so there is no recursion
+            return this.GetEnumerator();
+        }
+
 
     }
 }

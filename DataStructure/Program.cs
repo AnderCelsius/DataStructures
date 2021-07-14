@@ -35,8 +35,16 @@ namespace DataStructure
 
             var linkList = new LinkedList<int>();
             linkList.Add(5);
-            Console.WriteLine(linkList.Index(7));
-            Console.WriteLine(linkList.Check(7)); 
+            linkList.Add(10);
+            linkList.Add(15);
+            linkList.Add(10);
+            //Console.WriteLine(linkList.Index(7));
+            //Console.WriteLine(linkList.Check(7)); 
+
+            foreach (var item in linkList)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
